@@ -1,3 +1,7 @@
-fn main() {
-    println!("Hello, world!");
+mod backend;
+mod tui;
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    tui::run()?;
+    Ok(())
 }
